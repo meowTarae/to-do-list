@@ -1,0 +1,16 @@
+@import "reset.css";
+@import "to-do-box.css";
+@import "progressing.css";
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+
+  background: #262626;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
