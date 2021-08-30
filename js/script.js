@@ -1,9 +1,15 @@
 const getInput = document.querySelector(".progressing-form input");
 
-getInput.addEventListener("click", ifMousefocus);
+getInput.addEventListener("focus", ifMousefocus);
+getInput.addEventListener("blur", ifMouseblur);
 
 function ifMousefocus(event) {  
-    if (event.type === 'click') {
+    if (event.type === 'focus') {
         getInput.placeholder = "";
+    }
+}
+function ifMouseblur(event) {  
+    if (event.type === 'blur') {
+        getInput.placeholder = "Input What-You-Do";
     }
 }
