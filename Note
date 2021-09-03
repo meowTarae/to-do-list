@@ -1,0 +1,12 @@
+09-03
+1.
+ const li = document.createElement("li");
+ const span = document.createElement("span");
+  
+  li안에 span을 넣고싶다?
+
+    -> li.spanChild(span);
+
+
+
+2.
