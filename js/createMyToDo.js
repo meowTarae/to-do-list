@@ -14,8 +14,17 @@ function handlePrgSubmit(event){
 function moveValueToList(myToDo) {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    li.appendChild(span);
+    const button = document.createElement("button");
     span.innerText = myToDo;
+    button.innerText="❌";
+    li.appendChild(span);
+    li.appendChild(button);
     prgList.appendChild(li);
+    button.addEventListener("click", deleteToDo);
+}
+
+function deleteToDo(event) {
+    const li = event.target.parentElement;
+    li.remove();
 }
 
