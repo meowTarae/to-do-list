@@ -25,6 +25,7 @@ function moveValueToList(myToDo) {
 
 function deleteToDo(event) {
     const li = event.target.parentElement;
+    // btn의 부모 li를 const li로 지정.
     li.remove();
 }
 
