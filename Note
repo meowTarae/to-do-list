@@ -9,4 +9,64 @@
 
 
 
-2.
+09-11
+1. 배열을 하나 만들어서, 
+   user가 할일을 입력해서 li를 만들때, 
+   배열에다가 push하자.
+
+
+2. 배열에 있는 입력된 span값(= userInput.value)을 
+   localStorage로 보내서 저장하자.
+   (localStorage에는 array는 저장 못함 , can only save string)
+
+   저장을 위해 JSON.stringify(~)를 사용하자.
+   	       => ~에 들어있는것을 문자화.	
+
+
+3. 단순 문자를 살아있는 JS object로 만들어 보자.
+	=> JSON.parse("");
+	    ex) JSON.parse("[1,2,3]");
+   이제 이 값으로 실제로 무언가를 할 수 있음.
+
+
+4. localStroage에 저장되어있는 배열 값들이 a,b,c,d,e 라 가정.
+   각각의 배열 값에 함수 사용 가능.
+
+
+    ㅡ> 이해를 위해,
+    일단 parse시킨 변수를 선언 할게.
+   
+    const EXP = JSON.parse(localStorage.getItem(userInput.value));		 
+    EXP.forEach(연습func);
+   
+    function 연습func (event) { 
+	 console.log("hello", event);
+    }
+
+     결과 -> hello a, hello b, hello c, hello d, hello e
+
+
+	-알 수 있는 것-
+	 1. forEach는 array의 각 item에 대해 func를 실행해 줌.
+	 2. argument인 event를 활용할 수 있다.
+
+
+
+    +) shortCut(단축키) 활용  < Arrow function >
+   
+       EXP.forEach((item) => console.log("hello", item));
+
+
+5. 새로 고침 하면 새로 추가한 것은 ls에 잘 저장되는데, 예전 것은 없어짐
+   -> 새로 고침 했을때, let array=[]; 때문에 ls에 있던게 다 날아가버림..
+   그래서 array = JSON.parse("localStorage.getitem("입력했던 할일들"));
+   를 한번 해줘야한다.
+
+
+
+let array = [];
+
+array.push(userInput.value);
+localStorage.setItem("입력했던 할일들", JSON.stringify(userInput.value));
+EXP = JSON.parse("localStorage.getitem("입력했던 할일들"));
+array = EXP;
