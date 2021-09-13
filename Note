@@ -5,11 +5,14 @@
   
   li안에 span을 넣고싶다?
 
-    -> li.spanChild(span);
+    -> li.appendChild(span);
 
 
 
 09-11
+삭제 기능을 만들어 보자.
+
+
 1. 배열을 하나 만들어서, 
    user가 할일을 입력해서 li를 만들때, 
    배열에다가 push하자.
