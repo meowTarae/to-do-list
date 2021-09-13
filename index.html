@@ -8,21 +8,29 @@
     <title>To-do-list</title>
   </head>
   <body>
-    <div class="to-do-box">
-      <div class="progressing">
-        <div class="progressing-top">
-          <ul class="progressing-top-list"></ul>
+    <div class="to-do-list">
+      <!-- 왼쪽 할일 부분 -->
+      <div class="leftSide">
+        <div class="leftSide__to-do-locateControl">
+          <ul class="leftSide__to-do">
+            <!-- <li>
+              <span></span>
+              <button></button>
+            </li> -->
+            <!-- 유저의 입력으로 li에 span과 btn이 생성됨. -->
+          </ul>
         </div>
-        <div class="progressing-insert">
-          <form class="progressing-form">
+        <div class="leftSide__insert">
+          <form class="leftSide__form">
             <input type="text" placeholder="Input What-You-Do" required />
           </form>
         </div>
       </div>
-
-      <div class="complete"></div>
+      <!-- 오른쪽 완료 부분 -->
+      <div class="rightSide"></div>
     </div>
-    <script src="./js/clickSubmit.js"></script>
-    <script src="./js/createMyToDo.js"></script>
+    <!-- <script src="./js/createMyToDo.js"></script> -->
+    <script src="./js/ifClickSubmit.js"></script>
+    <script src="./js/ifEnterSubmit.js"></script>
   </body>
 </html>

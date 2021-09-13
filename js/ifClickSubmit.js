@@ -1,4 +1,4 @@
-const getInput = document.querySelector(".progressing-form input");
+const getInput = document.querySelector(".leftSide__form input");
 
 getInput.addEventListener("focus", ifMousefocus);
 getInput.addEventListener("blur", ifMouseblur);

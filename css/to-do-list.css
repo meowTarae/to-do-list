@@ -1,4 +1,4 @@
-.to-do-box {
+.to-do-list {
   width: 80%;
   height: 70vh;
   background: #fff;
@@ -10,8 +10,8 @@
   align-items: center;
 } /* main box */
 
-.to-do-box .progressing,
-.complete {
+.to-do-list .leftSide,
+.rightSide {
   width: 25%;
   height: 90%;
   background-color: cornsilk;

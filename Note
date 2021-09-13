@@ -73,3 +73,9 @@ array.push(userInput.value);
 localStorage.setItem("입력했던 할일들", JSON.stringify(userInput.value));
 EXP = JSON.parse("localStorage.getitem("입력했던 할일들"));
 array = EXP;
+
+
+09-13
+와! 샌즈! 프로그램 돌아간다!
+createMyToDo랑 ifEnterSubmit 서로 비교해서
+전자에 뭐가 잘못되서 실행이 안되는거였는지 확인 하자.

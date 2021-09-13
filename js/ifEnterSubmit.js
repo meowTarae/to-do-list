@@ -1,45 +1,52 @@
 const leftSideForm = document.querySelector(".leftSide__form");
 const leftSideInput = document.querySelector(".leftSide__form input");
 const leftSideToDo = document.querySelector(".leftSide__to-do");
-const KEY_TODOS = "user-to-do";
+
+
+const KEY_TODOS = "toDos";
 let leftSideArray = [];
 
 leftSideForm.addEventListener("submit", handleUserSubmit);
+// 유저가 할일 넣고 엔터 누르면~
 
-function handleUserSubmit(event){
+function handleUserSubmit(event) {
     event.preventDefault();
-    const myToDo = leftSideInput.value;    
+    const myToDo = leftSideInput.value;
     leftSideInput.value = "";
     leftSideArray.push(myToDo);
-    saveToDoOnArray();
-    registerTodo(myToDo);
+    saveMyToDo();
+    paintToDo(myToDo);
 }
 
-function saveToDoOnArray() {
+function saveMyToDo() {
     localStorage.setItem(KEY_TODOS, JSON.stringify(leftSideArray));
 }
 
-function registerTodo(myToDo) {
+function paintToDo(event) {
     const li = document.createElement("li");
     const span = document.createElement("span");
     const button = document.createElement("button");
-    span.innerText = myToDo;
-    button.innerText="❌";
     li.appendChild(span);
     li.appendChild(button);
     leftSideToDo.appendChild(li);
-    button.addEventListener("click", deleteToDo);
+    span.innerText = event;
+    button.innerText = "❌";
+    button.addEventListener("click", deleteTodo);
 }
 
-function deleteToDo(event) {
-    const li = event.target.parentElement; 
-    // btn의 부모 li를 const li로 지정.
+function deleteTodo(event) {
+    const li = event.target.parentElement;
     li.remove();
 }
 
-const checkLocalStorage = localStorage.getItem(KEY_TODOS);
 
-if (checkLocalStorage !== null) {
-    const parseToDo = JSON.parse(checkLocalStorage);
+const savedToDos = localStorage.getItem(KEY_TODOS);
+
+if (savedToDos !== null) {
+    const parseToDo = JSON.parse(savedToDos);
     leftSideArray = parseToDo;
+    parseToDo.forEach(paintToDo);
+    // F5눌러도 값이 남아있게 해줌
 }
+
+

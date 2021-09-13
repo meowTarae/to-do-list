@@ -1,29 +1,28 @@
-/* to-do-box left side */
-.progressing {
+.leftSide {
   color: rgba(0, 0, 0, 0.7);
   font-size: 30px;
 }
-.progressing div {
+.leftSide div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.progressing div:first-child {
-  /* progressing-top */
+.leftSide div:first-child {
+  /* leftSide__to-do-locateControl */
   width: 100%;
   height: 90%;
   justify-content: space-evenly;
   /* overflow-y: scroll; */
-  /* 세로 내림줄?  */
+  /* 세로 내림줄 관리  */
 }
-.progressing div:last-child {
-  /* progressing-insert */
+.leftSide div:last-child {
+  /* leftSide__insert */
   width: 100%;
   height: 10%;
 }
 
-.progressing-form input[type="text"] {
+.leftSide__form input[type="text"] {
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
   border: rgba(0, 0, 0, 0);
