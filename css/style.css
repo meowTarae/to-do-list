@@ -1,6 +1,6 @@
 @import "reset.css";
-@import "to-do-list.css";
 @import "leftSide.css";
+@import "to-do-list.css";
 @import "to-do-btn.css";
 
 * {
