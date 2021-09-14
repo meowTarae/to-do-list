@@ -36,9 +36,8 @@ function paintToDo(event) {
 
 function deleteTodo(event) {
     const li = event.target.parentElement;
-    li.remove();
+    li.remove();  
 }
-
 
 const savedToDos = localStorage.getItem(KEY_TODOS);
 
@@ -49,4 +48,16 @@ if (savedToDos !== null) {
     // F5눌러도 값이 남아있게 해줌
 }
 
+
+
+
+-0914
+const myToDoObj = {
+    text: myToDo,
+    id: Date.now(),
+};
+
+Date.now()로 id 부여해서 li에 등록하자.
+등록을 위해 함수들 간단하게 수정
+ 
 
