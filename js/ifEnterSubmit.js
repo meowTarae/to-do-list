@@ -42,12 +42,13 @@ function paintToDo(myToDoObj) {
     delBtn.innerText = "❌";
     li.id = myToDoObj.id;
 
-
+    complBtn.classList.add("complBtn");
+    delBtn.classList.add("delBtn");
     // css작업을 위해 두 btn들에게 id를 넣어 줌.
+
     complBtn.addEventListener("click", complTodo);
     delBtn.addEventListener("click", deleteTodo);
 }
-
 
 
 const savedToDos = localStorage.getItem(KEY_TODOS);
@@ -58,8 +59,6 @@ if (savedToDos !== null) {
     parseToDo.forEach(paintToDo);
     // F5눌러도 값이 남아있게 해줌
 }
-
-
 
 
  

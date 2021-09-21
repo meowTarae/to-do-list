@@ -1,7 +1,20 @@
-li {
+.leftSide__to-do-locateControl {
+  display: flex;
+  justify-content: center;
+}
+.leftSide__to-do-locateControl:not(span) {
   position: relative;
 }
 button {
+  position: absolute;
+
+  right: 0%;
+  margin-right: 5%;
+
+  font-size: 15px;
   background-color: rgba(0, 0, 0, 0);
   border: unset;
+}
+.complBtn {
+  margin-right: 25%;
 }
