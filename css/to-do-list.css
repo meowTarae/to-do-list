@@ -1,5 +1,5 @@
 .to-do-list {
-  width: 80%;
+  width: 60%;
   height: 70vh;
   background: #fff;
   border-radius: 20px;
@@ -12,7 +12,7 @@
 
 .to-do-list .leftSide,
 .rightSide {
-  width: 25%;
+  width: 35%;
   height: 90%;
   background-color: cornsilk;
   border-radius: 20px;

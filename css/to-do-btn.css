@@ -2,11 +2,6 @@ li {
   position: relative;
 }
 button {
-  position: absolute;
-  top: 10%;
-  left: 140%;
-
   background-color: rgba(0, 0, 0, 0);
-
   border: unset;
 }
