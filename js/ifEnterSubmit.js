@@ -4,7 +4,7 @@ const leftSideForm = document.querySelector(".leftSide__form");
 const leftSideInput = document.querySelector(".leftSide__form input");
 const leftSideToDo = document.querySelector(".leftSide__to-do");
 
-const KEY_TODOS = "toDos";
+const TODOS_KEY = "toDos";
 let leftSideArray = [];
 
 leftSideForm.addEventListener("submit", handleUserSubmit);
@@ -13,7 +13,6 @@ leftSideForm.addEventListener("submit", handleUserSubmit);
 function handleUserSubmit(event) {
     event.preventDefault();
     const myToDo = leftSideInput.value;
-    // myToDo = User Input Value
     leftSideInput.value = "";    
     const myToDoObj = {
         text: myToDo,
@@ -25,7 +24,7 @@ function handleUserSubmit(event) {
 }
 
 function saveMyToDo() {
-    localStorage.setItem(KEY_TODOS, JSON.stringify(leftSideArray));
+    localStorage.setItem(TODOS_KEY, JSON.stringify(leftSideArray));
 }
 
 function paintToDo(myToDoObj) {
@@ -38,7 +37,7 @@ function paintToDo(myToDoObj) {
     li.appendChild(delBtn);
     leftSideToDo.appendChild(li);
     span.innerText = myToDoObj.text;
-    complBtn.innerText = "✔";
+    complBtn.innerText = "✔️";
     delBtn.innerText = "❌";
     li.id = myToDoObj.id;
 
@@ -47,17 +46,16 @@ function paintToDo(myToDoObj) {
     // css작업을 위해 두 btn들에게 id를 넣어 줌.
 
     complBtn.addEventListener("click", complTodo);
-    delBtn.addEventListener("click", deleteTodo);
+    delBtn.addEventListener("click", leftSideDeleteTodo);
 }
 
 
-const savedToDos = localStorage.getItem(KEY_TODOS);
+const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
     const parseToDo = JSON.parse(savedToDos);
     leftSideArray = parseToDo;
     parseToDo.forEach(paintToDo);
-    // F5눌러도 값이 남아있게 해줌
 }
 
 

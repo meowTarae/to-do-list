@@ -1,22 +1,43 @@
 const rightSideComplList = document.querySelector(".rightSide__complList");
+const COMPLETETODO_KEY = "completeToDo";
 let rightSideArray = [];
 
 function complTodo(event) {    
-    const inputValue = event.target.parentElement.firstChild;
-    const complSpan = document.createElement("span");
-    rightSideComplList.appendChild(complSpan);
-    complSpan.innerText = inputValue.innerText;
-    // 화면 상에 체크 눌렀던 Input값이 rightSide에 표시되게끔..
-
-    const resistComplToDo = {
-        text: inputValue.innerText,
-        id: inputValue.id,
+    const complLi = event.target.parentElement;
+    const registeComplToDo = {
+        text: complLi.firstChild.innerText,
+        id: complLi.id,
     };
-    rightSideArray.push(resistComplToDo);
-    localStorage.setItem("completeToDo", JSON.stringify(rightSideArray));
+    rightSideArray.push(registeComplToDo);
 
-    deleteTodo(event);
+    saveComplToDo();
+    paintComplToDo(registeComplToDo);
+    leftSideDeleteTodo(event);
 }
 
-// id값은 어떻게 구해야 할까?
-// f5 눌러도 completeToDo_KEY에 남아있는 값이 보존되도록
+function saveComplToDo() {
+    localStorage.setItem(COMPLETETODO_KEY, JSON.stringify(rightSideArray));
+    console.log(rightSideArray);
+}
+
+function paintComplToDo(toDo) {
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+
+    li.appendChild(span);
+    rightSideComplList.appendChild(li);
+
+    li.id = toDo.id;
+    span.innerText = toDo.text;
+
+    span.addEventListener("click", rightSideDeleteTodo);
+}
+
+
+const savedComplToDo = localStorage.getItem(COMPLETETODO_KEY);
+
+if (savedComplToDo !== null) {
+    const parseComplToDo = JSON.parse(savedComplToDo);
+    rightSideArray = parseComplToDo ;
+    parseComplToDo.forEach(paintComplToDo);
+}

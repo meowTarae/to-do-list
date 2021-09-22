@@ -1,20 +1,20 @@
-.leftSide__to-do-locateControl {
+/* .leftSide__locateControl {
   display: flex;
   justify-content: center;
-}
-.leftSide__to-do-locateControl:not(span) {
+} */
+.leftSide__locateControl:not(span) {
   position: relative;
 }
+
 button {
   position: absolute;
 
-  right: 0%;
-  margin-right: 5%;
-
-  font-size: 15px;
+  right: 18%;
+  font-size: 17px;
   background-color: rgba(0, 0, 0, 0);
   border: unset;
 }
 .complBtn {
-  margin-right: 25%;
+  margin-right: 12%;
+  color: green;
 }
