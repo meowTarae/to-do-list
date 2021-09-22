@@ -41,10 +41,12 @@ function paintToDo(myToDoObj) {
     delBtn.innerText = "❌";
     li.id = myToDoObj.id;
 
-    complBtn.classList.add("complBtn");
-    delBtn.classList.add("delBtn");
+    span.classList.add("toDoSpan");
+    complBtn.classList.add("complBtn", "hidden");
+    delBtn.classList.add("delBtn", "hidden");
     // css작업을 위해 두 btn들에게 id를 넣어 줌.
 
+    span.addEventListener("click", spanLeftMove);
     complBtn.addEventListener("click", complTodo);
     delBtn.addEventListener("click", leftSideDeleteTodo);
 }

@@ -29,7 +29,8 @@ function paintComplToDo(toDo) {
 
     li.id = toDo.id;
     span.innerText = toDo.text;
-
+    span.classList.add("complSpan");
+    
     span.addEventListener("click", rightSideDeleteTodo);
 }
 

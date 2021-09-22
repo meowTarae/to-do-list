@@ -1,0 +1,28 @@
+/* 마우스 올리면 크기가 살짝 커지게끔 */
+span:hover {
+  animation: ifHoverSpan 0.2s ease-in-out forwards;
+}
+span:active {
+  animation: moveLeft 0.2s ease-in-out forwards;
+}
+@keyframes ifHoverSpan {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    color: lightskyblue;
+    font-size: 1.1em;
+    line-height: 0.01px;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: translateX(-10%);
+  }
+}

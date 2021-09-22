@@ -1,11 +1,8 @@
-/* .leftSide__locateControl {
-  display: flex;
-  justify-content: center;
-} */
 .leftSide__locateControl:not(span) {
   position: relative;
 }
-
+ul {
+}
 button {
   position: absolute;
 
