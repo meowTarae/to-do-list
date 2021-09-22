@@ -1,8 +1,7 @@
 .leftSide__locateControl:not(span) {
   position: relative;
 }
-ul {
-}
+
 button {
   position: absolute;
 

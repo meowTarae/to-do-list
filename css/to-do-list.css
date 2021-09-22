@@ -10,7 +10,7 @@
   align-items: center;
 } /* main box */
 
-.to-do-list .leftSide,
+.leftSide,
 .rightSide {
   width: 40%;
   height: 90%;
@@ -20,10 +20,40 @@
 
   color: rgba(255, 255, 255, 0.8);
   font-size: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.to-do-list li {
-  margin-top: 20px;
+.leftSide div,
+.rightSide div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 12.5%;
+}
+.leftSide div:first-child {
+  width: 100%;
+  height: 75%;
+  align-items: center;
+
+  /* overflow-y: scroll; */
+}
+.rightSide div:first-child {
+  width: 100%;
+  height: 90%;
+  align-items: center;
+}
+.leftSide div:last-child,
+.rightSide div:last-child {
+  width: 100%;
+  height: 10%;
+  background-color: inherit;
+}
+.leftSide ul,
+.rightSide ul {
   text-align: center;
-  vertical-align: middle;
+  line-height: 170%;
 }

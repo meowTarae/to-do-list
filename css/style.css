@@ -1,6 +1,5 @@
 @import "reset.css";
-@import "leftSide.css";
-@import "innerSide.css";
+@import "inputToDo.css";
 @import "to-do-list.css";
 @import "to-do-btn.css";
 @import "ifHoverSpan.css";
