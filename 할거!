@@ -13,6 +13,23 @@ span 클릭하면, 왼쪽으로 이동하자 -> 북마크 JQuery 블로그 보�
 btn들 hidden클래스를 toggle 해주자
 
 
+-내 생각-
+css
+.moveleft {
+  animation: moveLeft 0.2s lieanr fowards;
+}
+@keyframes moveLeft {
+  ~~
+}
+js 
+a.addeventlistner("click", func);
+
+function func(){
+  A.classList.toggle("moveLeft");
+  B.classList.toggle("moveRight");
+}
+
+이렇게하면 되지않을까..
 
 
 
