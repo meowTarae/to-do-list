@@ -1,10 +1,12 @@
 /* 마우스 올리면 크기가 살짝 커지게끔 */
-span:hover {
+.toDoSpan:hover {
   animation: ifHoverSpan 0.2s ease-in-out forwards;
 }
-
 .moveLeft {
-  animation: moveLeft 1s ease-in-out forwards;
+  animation: moveLeft 0.6s ease-in-out forwards;
+}
+.moveRight {
+  animation: moveRight 0.6s ease-in-out forwards;
 }
 
 @keyframes ifHoverSpan {
@@ -14,7 +16,7 @@ span:hover {
 
   100% {
     color: lightskyblue;
-    font-size: 45px;
+    font-size: 33px;
     line-height: 10px;
   }
 }
@@ -22,8 +24,29 @@ span:hover {
 @keyframes moveLeft {
   0% {
     transform: none;
+    /* color: lightskyblue;
+    font-size: 33px;
+    line-height: 10px; */
   }
   100% {
-    align-items: flex-start;
+    transform: translateX(-50%);
+    color: lightskyblue;
+    font-size: 33px;
+    line-height: 10px;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+    color: lightskyblue;
+    font-size: 33px;
+    line-height: 10px;
+  }
+  100% {
+    transform: none;
+    /* color: lightskyblue;
+    font-size: 33px;
+    line-height: 10px; */
   }
 }

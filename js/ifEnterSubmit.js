@@ -42,7 +42,7 @@ function paintToDo(myToDoObj) {
     delBtn.innerText = "❌";
     li.id = myToDoObj.id;
 
-    
+    span.classList.add("toDoSpan");
     complBtn.classList.add("complBtn", "hidden");
     delBtn.classList.add("delBtn", "hidden");
     // css작업을 위해 두 btn들에게 id를 넣어 줌.
