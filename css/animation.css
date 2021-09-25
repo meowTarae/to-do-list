@@ -3,6 +3,10 @@ span:hover {
   animation: ifHoverSpan 0.2s ease-in-out forwards;
 }
 
+.moveLeft {
+  animation: moveLeft 1s ease-in-out forwards;
+}
+
 @keyframes ifHoverSpan {
   0% {
     transform: none;
@@ -10,7 +14,16 @@ span:hover {
 
   100% {
     color: lightskyblue;
-    font-size: 40px;
+    font-size: 45px;
     line-height: 10px;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: none;
+  }
+  100% {
+    align-items: flex-start;
   }
 }

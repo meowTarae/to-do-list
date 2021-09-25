@@ -2,7 +2,7 @@
 @import "inputToDo.css";
 @import "to-do-list.css";
 @import "to-do-btn.css";
-@import "ifHoverSpan.css";
+@import "animation.css";
 
 * {
   box-sizing: border-box;
