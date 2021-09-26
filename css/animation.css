@@ -1,6 +1,6 @@
 /* 마우스 올리면 크기가 살짝 커지게끔 */
-.toDoSpan:hover {
-  animation: ifHoverSpan 0.2s ease-in-out forwards;
+span:hover {
+  /* animation: ifHoverSpan 0.2s ease-in-out forwards; */
 }
 .moveLeft {
   animation: moveLeft 0.6s ease-in-out forwards;

@@ -6,7 +6,7 @@ function leftSideDeleteTodo(event) {
 }
 
 function rightSideDeleteTodo(event) {
-    const li = event.target.parentElement;
+    const li = event.target.parentElement.parentElement;
     rightSideArray = rightSideArray.filter((todo) => li.id !== todo.id);
     li.remove();
     saveComplToDo();

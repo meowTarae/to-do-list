@@ -30,10 +30,11 @@ function saveMyToDo() {
 function paintToDo(myToDoObj) {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    
+    const div = document.createElement("div");
     const complBtn = document.createElement("button");
     const delBtn = document.createElement("button");
-    li.appendChild(span);
+    div.appendChild(span);
+    li.appendChild(div);
     li.appendChild(complBtn);
     li.appendChild(delBtn);
     leftSideToDo.appendChild(li);
@@ -42,12 +43,11 @@ function paintToDo(myToDoObj) {
     delBtn.innerText = "❌";
     li.id = myToDoObj.id;
 
+    div.classList.add("toDoDiv");
     span.classList.add("toDoSpan");
     complBtn.classList.add("complBtn", "hidden");
     delBtn.classList.add("delBtn", "hidden");
-    // css작업을 위해 두 btn들에게 id를 넣어 줌.
 
-    
     complBtn.addEventListener("click", complTodo);
     delBtn.addEventListener("click", leftSideDeleteTodo);
 }
@@ -60,7 +60,6 @@ if (savedToDos !== null) {
     leftSideArray = parseToDo;
     parseToDo.forEach(paintToDo);
 }
-
 
  
 

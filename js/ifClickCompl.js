@@ -17,21 +17,22 @@ function complTodo(event) {
 
 function saveComplToDo() {
     localStorage.setItem(COMPLETETODO_KEY, JSON.stringify(rightSideArray));
-    console.log(rightSideArray);
 }
 
 function paintComplToDo(toDo) {
     const li = document.createElement("li");
     const span = document.createElement("span");
+    const div = document.createElement("div");
 
-    li.appendChild(span);
+    div.appendChild(span);
+    li.appendChild(div);
     rightSideComplList.appendChild(li);
 
     li.id = toDo.id;
     span.innerText = toDo.text;
-    span.classList.add("complSpan");
+    div.classList.add("complDiv");
     
-    span.addEventListener("click", rightSideDeleteTodo);
+    div.addEventListener("click", rightSideDeleteTodo);
 }
 
 
