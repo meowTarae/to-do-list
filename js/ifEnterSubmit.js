@@ -33,6 +33,7 @@ function paintToDo(myToDoObj) {
     const div = document.createElement("div");
     const complBtn = document.createElement("button");
     const delBtn = document.createElement("button");
+
     div.appendChild(span);
     li.appendChild(div);
     li.appendChild(complBtn);
@@ -52,7 +53,6 @@ function paintToDo(myToDoObj) {
     delBtn.addEventListener("click", leftSideDeleteTodo);
 }
 
-
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
@@ -60,6 +60,3 @@ if (savedToDos !== null) {
     leftSideArray = parseToDo;
     parseToDo.forEach(paintToDo);
 }
-
- 
-

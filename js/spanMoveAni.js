@@ -1,10 +1,4 @@
-const span = document.querySelector(".toDoSpan");
-
-span.addEventListener("click", gogo);
-
-function gogo() {
-    console.log('exp');
-}
+// 옆 파일에서 변수값을 가져올수있남??
 
 
 
