@@ -60,3 +60,8 @@ if (savedToDos !== null) {
     leftSideArray = parseToDo;
     parseToDo.forEach(paintToDo);
 }
+
+// const clickedDiv = document.createElement("div");
+// clickedDiv.onClick = function () {
+//     console.log("hello");
+// }
