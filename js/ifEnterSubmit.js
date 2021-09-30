@@ -72,4 +72,4 @@ if (savedToDos !== null) {
 // 를 하면 쓸 수 있을거같아.
 
 
-// 
+// 아니면 document에 onclick 옵션을 넣어보자
