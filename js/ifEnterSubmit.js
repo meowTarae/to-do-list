@@ -65,3 +65,11 @@ if (savedToDos !== null) {
 // clickedDiv.onClick = function () {
 //     console.log("hello");
 // }
+
+
+// localStorage 값은 문자화되어있으니
+// const a = JSON.parse(localStorage.getItem(TODOS_KEY));
+// 를 하면 쓸 수 있을거같아.
+
+
+// 
