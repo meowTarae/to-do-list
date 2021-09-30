@@ -73,3 +73,4 @@ if (savedToDos !== null) {
 
 
 // 아니면 document에 onclick 옵션을 넣어보자
+// 참고 링크 -> https://zetawiki.com/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_onclick_%EC%9D%B4%EB%B2%A4%ED%8A%B8 
