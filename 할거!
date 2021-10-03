@@ -1,37 +1,5 @@
 할거
 
-. span 클릭 시 왼쪽으로 밀려지고 버튼이 생기는 거야!
-
-오늘은 이거만 다 하고 간다.
-
-일단 v,x 버튼 숨기자
-그리고 span을 가운데로 옮겨줘 - ok
-
-span 클릭하면, 왼쪽으로 이동하자 -> 북마크 JQuery 블로그 보고 공부해보자
-
-그리고 해당 span.parentElement의 
-btn들 hidden클래스를 toggle 해주자
-
-
--내 생각-
-css
-.moveleft {
-  animation: moveLeft 0.2s lieanr fowards;
-}
-@keyframes moveLeft {
-  ~~
-}
-js 
-a.addeventlistner("click", func);
-
-function func(){
-  A.classList.toggle("moveLeft");
-  B.classList.toggle("moveRight");
-}
-
-이렇게하면 되지않을까..
-
-
 
 
 

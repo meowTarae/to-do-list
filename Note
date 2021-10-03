@@ -108,3 +108,9 @@ API - Current Weatehr Data에서 주소값을 얻은 후, 위도,경도, 내 API
 
 fetch(url); 로 JS가 대신 url을 불러줄거얌! 
 그럼 c+s+i - Network 에서 가져온 url의 정보를 확인할 수 있어! (= JSON)
+
+
+
+솔직히 span, div를 btn으로 바꾸고
+onclick넣어버리면 되긴한데
+ㅈ노잼이라그러면

@@ -51,7 +51,7 @@ function paintToDo(myToDoObj) {
     complBtn.classList.add("complBtn", "hidden");
     delBtn.classList.add("delBtn", "hidden");
         
-    div.addEventListener("click", hi);
+    div.addEventListener("click", handleClickedSpan);
     complBtn.addEventListener("click", complTodo);
     delBtn.addEventListener("click", leftSideDeleteTodo);
 }
@@ -64,33 +64,28 @@ if (savedToDos !== null) {
     parseToDo.forEach(paintToDo);
 }
 
-function hi(e) {
-    // div.classList.toggle("moveLeft");
-    console.log(e.target.parentElement.parentElement.id);
+
+function handleClickedSpan(clickedSpan) {
+    const LI = clickedSpan.target.parentElement.parentElement;
+    const DIV = LI.childNodes[0];
+    const complBUTTON = LI.childNodes[1];
+    const delBUTTON = LI.childNodes[2];
+
+    const MOVE_LEFT = "moveLeft";
+    const MOVE_RIGHT = "moveRight";    
+    const HIDDEN = "hidden";
+
+        if (DIV.classList.contains(MOVE_LEFT) == true) {        
+            DIV.classList.toggle(MOVE_LEFT);
+            DIV.classList.toggle(MOVE_RIGHT);                
+            complBUTTON.classList.toggle(HIDDEN);
+            delBUTTON.classList.toggle(HIDDEN);
+        }
+        else {
+            DIV.classList.add(MOVE_LEFT);
+            DIV.classList.remove(MOVE_RIGHT);
+            complBUTTON.classList.toggle(HIDDEN);
+            delBUTTON.classList.toggle(HIDDEN);
+        }
+    
 }
-
-
-
-// 1. 클릭한 div를 함수로 이동시킨다.
-// 2. div의 id를 얻는다.
-// 3. 얻어낸 id의 div를 움직인다.
-
-
-// const clickedDiv = document.createElement("div");
-// clickedDiv.onClick = function () {
-//     console.log("hello");
-// }
-
-
-// localStorage 값은 문자화되어있으니
-// const a = JSON.parse(localStorage.getItem(TODOS_KEY));
-// 를 하면 쓸 수 있을거같아.
-
-
-// 아니면 document에 onclick 옵션을 넣어보자
-// 참고 링크 -> https://zetawiki.com/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_onclick_%EC%9D%B4%EB%B2%A4%ED%8A%B8 
-
-
-// const btn = document.querySelector("~~");
-// btn.onClick = cc;
-// function cc () {~~};
