@@ -68,8 +68,8 @@ if (savedToDos !== null) {
 function handleClickedSpan(clickedSpan) {
     const LI = clickedSpan.target.parentElement.parentElement;
     const DIV = LI.childNodes[0];
-    const complBUTTON = LI.childNodes[1];
-    const delBUTTON = LI.childNodes[2];
+    const BUTTON_COMPL = LI.childNodes[1];
+    const BUTTON_DEL = LI.childNodes[2];
 
     const MOVE_LEFT = "moveLeft";
     const MOVE_RIGHT = "moveRight";    
@@ -78,14 +78,14 @@ function handleClickedSpan(clickedSpan) {
         if (DIV.classList.contains(MOVE_LEFT) == true) {        
             DIV.classList.toggle(MOVE_LEFT);
             DIV.classList.toggle(MOVE_RIGHT);                
-            complBUTTON.classList.toggle(HIDDEN);
-            delBUTTON.classList.toggle(HIDDEN);
+            BUTTON_COMPL.classList.toggle(HIDDEN);
+            BUTTON_DEL.classList.toggle(HIDDEN);
         }
         else {
             DIV.classList.add(MOVE_LEFT);
             DIV.classList.remove(MOVE_RIGHT);
-            complBUTTON.classList.toggle(HIDDEN);
-            delBUTTON.classList.toggle(HIDDEN);
+            BUTTON_COMPL.classList.toggle(HIDDEN);
+            BUTTON_DEL.classList.toggle(HIDDEN);
         }
     
 }
