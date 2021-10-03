@@ -5,6 +5,8 @@ const leftSideInput = document.querySelector(".leftSide__form input");
 const leftSideToDo = document.querySelector(".leftSide__to-do");
 
 const TODOS_KEY = "toDos";
+const TODODIV = "toDoDiv";
+
 let leftSideArray = [];
 
 leftSideForm.addEventListener("submit", handleUserSubmit);
@@ -44,11 +46,12 @@ function paintToDo(myToDoObj) {
     delBtn.innerText = "❌";
     li.id = myToDoObj.id;
 
-    div.classList.add("toDoDiv");
+    div.classList.add(TODODIV);
     span.classList.add("toDoSpan");
     complBtn.classList.add("complBtn", "hidden");
     delBtn.classList.add("delBtn", "hidden");
-
+        
+    div.addEventListener("click", hi);
     complBtn.addEventListener("click", complTodo);
     delBtn.addEventListener("click", leftSideDeleteTodo);
 }
@@ -60,6 +63,18 @@ if (savedToDos !== null) {
     leftSideArray = parseToDo;
     parseToDo.forEach(paintToDo);
 }
+
+function hi(e) {
+    // div.classList.toggle("moveLeft");
+    console.log(e.target.parentElement.parentElement.id);
+}
+
+
+
+// 1. 클릭한 div를 함수로 이동시킨다.
+// 2. div의 id를 얻는다.
+// 3. 얻어낸 id의 div를 움직인다.
+
 
 // const clickedDiv = document.createElement("div");
 // clickedDiv.onClick = function () {
